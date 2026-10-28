@@ -1,0 +1,130 @@
+{
+  "parish": {
+    "name": {
+      "en": "Most Holy Name of Jesus Parish",
+      "es": "Parroquia del Santísimo Nombre de Jesús"
+    },
+    "diocese": {
+      "en": "Diocese of Metuchen",
+      "es": "Diócesis de Metuchen"
+    },
+    "phone": "(732) 442-0512",
+    "email": "mostholynameofjesus@gmail.com",
+    "website": "https://mostholynameofjesus.org",
+    "established": 2012
+  },
+  "pastor": {
+    "name": "Rev. Ron Machado",
+    "title": {
+      "en": "Pastor",
+      "es": "Párroco"
+    },
+    "vicar": "Rev. John Zec",
+    "weekendAssistant": "Rev. Nicolas F. Noreña",
+    "deacons": ["Noe Cortez", "Enrique Garcia", "Fritz Molina", "Freddy Perez", "Ubaldo Valdez"]
+  },
+  "churches": [
+    {
+      "id": "holy-trinity",
+      "name": {
+        "en": "Holy Trinity Church",
+        "es": "Iglesia de la Santísima Trinidad"
+      },
+      "heritage": {
+        "en": "Slovak Catholic Community",
+        "es": "Comunidad Católica Eslovaca"
+      },
+      "address": "315 Lawrie Street, Perth Amboy, NJ 08861",
+      "mapUrl": "https://www.google.com/maps/place/Holy+Trinity+Church/@40.5168416,-74.2737243,19.86z/data=!4m15!1m8!3m7!1s0x89c3ca78f65ece5d:0xff1f4986f64a11e2!2s315+Lawrie+St,+Perth+Amboy,+NJ+08861!3b1!8m2!3d40.5169313!4d-74.2734968!16s%2Fg%2F11b8v755hf!3m5!1s0x89c3ca78c4868f3f:0x4f20ae32ccff421f!8m2!3d40.5169171!4d-74.2734661!16s%2Fg%2F1tjdmpk3?entry=ttu",
+      "color": "#e6dccd",
+      "accent": "#8b7355",
+      "masses": {
+        "sunday": [
+          { "time": "9:00 AM", "lang": "English" },
+          { "time": "12:00 PM", "lang": "Español" }
+        ],
+        "weekday": [
+          { "day": { "en": "Monday", "es": "Lunes" }, "time": "8:00 AM" },
+          { "day": { "en": "Tuesday", "es": "Martes" }, "time": "7:00 PM" },
+          { "day": { "en": "Wednesday", "es": "Miércoles" }, "time": "8:00 AM" },
+          { "day": { "en": "Thursday", "es": "Jueves" }, "time": "7:00 PM" },
+          { "day": { "en": "Friday", "es": "Viernes" }, "time": "7:00 PM" },
+          { "day": { "en": "Saturday", "es": "Sábado" }, "time": "8:00 AM" }
+        ],
+        "confessions": {
+          "en": "Sunday 8:30–9:00 AM",
+          "es": "Domingo 8:30–9:00 AM"
+        }
+      },
+      "image": "/assets/holy-trinity-church.jpg"
+    },
+    {
+      "id": "la-asuncion",
+      "name": {
+        "en": "La Asunción Catholic Church",
+        "es": "Iglesia Católica La Asunción"
+      },
+      "heritage": {
+        "en": "Hispanic Catholic Community",
+        "es": "Comunidad Católica Hispana"
+      },
+      "address": "777 Cortlandt Street, Perth Amboy, NJ 08861",
+      "mapUrl": "https://www.google.com/maps/place/La+Asuncion+Catholic+Church/@40.5246039,-74.2656385,20z/data=!4m15!1m8!3m7!1s0x89c3b58289665237:0x40b2ba6822ff5175!2s777+Cortlandt+St,+Perth+Amboy,+NJ+08861!3b1!8m2!3d40.524766!4d-74.265957!16s%2Fg%2F11jr1jtxhy!3m5!1s0x89c3b5826e7d6663:0x2b0985d61a39a906!8m2!3d40.5247267!4d-74.266029!16s%2Fg%2F1tl_03m4?entry=ttu",
+      "color": "#efd3da",
+      "accent": "#9b4d6a",
+      "isParishOffice": true,
+      "image": "/assets/la-asuncion-church.png",
+      "masses": {
+        "sunday": [
+          { "time": "7:30 AM", "lang": "Español" },
+          { "time": "10:30 AM", "lang": "Español" },
+          { "time": "1:30 PM", "lang": "Español" },
+          { "time": "6:00 PM", "lang": "Español" }
+        ],
+        "saturday": [
+          { "time": "6:00 PM", "lang": "Español" }
+        ],
+        "weekday": [
+          { "day": { "en": "Mon–Wed", "es": "Lun–Mié" }, "time": "7:00 PM", "lang": "Español" }
+        ],
+        "confessions": {
+          "en": "By appointment",
+          "es": "Con cita previa"
+        }
+      }
+    },
+    {
+      "id": "our-lady-hungary",
+      "name": {
+        "en": "Our Lady of Hungary Church",
+        "es": "Iglesia Nuestra Señora de Hungría"
+      },
+      "heritage": {
+        "en": "Hungarian Catholic Community",
+        "es": "Comunidad Católica Húngara"
+      },
+      "address": "697 Cortlandt Street, Perth Amboy, NJ 08861",
+      "mapUrl": "https://www.google.com/maps/place/Our+Lady+of+Hungary+Church/@40.522032,-74.2669147,20.53z/data=!4m15!1m8!3m7!1s0x89c3b5818e6e0f3d:0xa54a9ac6f5fb90f5!2s697+Cortlandt+St,+Perth+Amboy,+NJ+08861!3b1!8m2!3d40.5221025!4d-74.2667727!16s%2Fg%2F11b8zg65gs!3m5!1s0x89c3b5818ce1b9d1:0x34b862631b88f2d0!8m2!3d40.5219365!4d-74.2669247!16s%2Fg%2F11b7rn63k3?entry=ttu",
+      "color": "#cfd3cb",
+      "accent": "#4a6741",
+      "masses": {
+        "saturday": [
+          { "time": "8:00 AM", "lang": "Español" }
+        ],
+        "weekday": [
+          { "day": { "en": "Thursday", "es": "Jueves" }, "time": "7:00 PM", "lang": "Español" },
+          { "day": { "en": "Friday", "es": "Viernes" }, "time": "7:00 PM", "lang": "Español" }
+        ],
+        "confessions": {
+          "en": "Thursday 6:00–6:45 PM, Saturday 5:00–5:45 PM",
+          "es": "Jueves 6:00–6:45 PM, Sábado 5:00–5:45 PM"
+        },
+        "adoration": {
+          "en": "First Friday 8:00–9:00 PM",
+          "es": "Primer Viernes 8:00–9:00 PM"
+        }
+      },
+      "image": "/assets/dulmen-st-viktor-kirche-innenansicht-altar-2018.jpg"
+    }
+  ]
+}

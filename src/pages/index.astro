@@ -1,0 +1,762 @@
+---
+import '../styles/global.css';
+import data from '../data/churches.json';
+
+const churches = data.churches;
+---
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Most Holy Name of Jesus Parish — Perth Amboy, NJ</title>
+  <meta name="description" content="Most Holy Name of Jesus Parish — Holy Trinity, La Asunción, and Our Lady of Hungary in Perth Amboy, New Jersey. Diocese of Metuchen." />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="preconnect" href="https://api.fontshare.com" />
+  <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
+  <link href="https://api.fontshare.com/v2/css?f[]=chillax@400,500,600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="fixed top-0 left-0 w-full z-50 flex items-center justify-between h-16" style="padding: 0 var(--margin); background: rgba(252,249,242,0.95);">
+    <a href="#" class="flex items-center gap-2" style="color: var(--accent); font-size: var(--step-small); font-weight: 600; letter-spacing: -0.02em; text-decoration: none;">
+      <img src="/favicon.ico" alt="" width="24" height="24" style="flex-shrink: 0;" />
+      <span data-lang="en">Most Holy Name of Jesus</span>
+      <span data-lang="es">Santísimo Nombre de Jesús</span>
+    </a>
+    <div class="flex items-center gap-6">
+      <a href="#about-us" class="hidden sm:inline" style="font-size: var(--step-small); color: var(--muted);" data-lang="en">About Us</a>
+      <a href="#about-us" class="hidden sm:inline" style="font-size: var(--step-small); color: var(--muted);" data-lang="es">Nosotros</a>
+      <a href="#churches" class="hidden sm:inline" style="font-size: var(--step-small); color: var(--muted);" data-lang="en">Churches</a>
+      <a href="#churches" class="hidden sm:inline" style="font-size: var(--step-small); color: var(--muted);" data-lang="es">Iglesias</a>
+      <a href="#pastor" class="hidden sm:inline" style="font-size: var(--step-small); color: var(--muted);" data-lang="en">Pastor</a>
+      <a href="#pastor" class="hidden sm:inline" style="font-size: var(--step-small); color: var(--muted);" data-lang="es">Párroco</a>
+      <a href="#bulletins" class="hidden sm:inline" style="font-size: var(--step-small); color: var(--muted);" data-lang="en">Bulletins</a>
+      <a href="#bulletins" class="hidden sm:inline" style="font-size: var(--step-small); color: var(--muted);" data-lang="es">Boletines</a>
+      <a href="#contact" class="hidden sm:inline" style="font-size: var(--step-small); color: var(--muted);" data-lang="en">Contact</a>
+      <a href="#contact" class="hidden sm:inline" style="font-size: var(--step-small); color: var(--muted);" data-lang="es">Contacto</a>
+      <button id="lang-toggle" class="btn" style="padding: 6px 16px; font-size: var(--step-small);" aria-label="Switch language">ES</button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="relative overflow-hidden" style="padding: 100px var(--margin) clamp(80px, 15vw, 200px); background: var(--bg);">
+    <!-- Full-bleed stained glass hero image -->
+    <div class="absolute inset-0">
+      <picture>
+      <picture>
+        <source media="(max-width: 768px)" srcset="/assets/madonna-portrait.png" />
+        <img src="/assets/marian-sanctuary.png" alt="Serene Marian sanctuary in golden light" class="w-full h-full object-cover" style="opacity: 0.45;" decoding="async" />
+      </picture>
+      </picture>
+      <div class="absolute inset-0" style="background: rgba(41,53,75,0.6);"></div>
+    </div>
+
+
+    <div class="relative z-10 max-w-4xl">
+      <h1 class="font-semibold" style="font-size: var(--step-display); letter-spacing: -0.03em; line-height: 1.05; color: #ffffff;">
+        <span data-lang="en">Most Holy Name<br/>of Jesus Parish</span>
+        <span data-lang="es">Parroquia del Santísimo<br/>Nombre de Jesús</span>
+      </h1>
+      <p class="mt-6 max-w-lg" style="font-size: var(--step-lead); color: var(--sky); line-height: 1.6;">
+        <span data-lang="en">Perth Amboy, New Jersey. Diocese of Metuchen.</span>
+        <span data-lang="es">Perth Amboy, New Jersey. Diócesis de Metuchen.</span>
+      </p>
+      <div class="flex gap-4 mt-10 flex-wrap">
+        <a href="#churches" class="btn" style="font-size: var(--step-body);">
+          <span data-lang="en">Explore Our Churches</span>
+          <span data-lang="es">Explora Nuestras Iglesias</span>
+        </a>
+        <a href="#contact" class="btn" style="font-size: var(--step-body); background: var(--gold); color: var(--ink);">
+          <span data-lang="en">Get in Touch</span>
+          <span data-lang="es">Contáctenos</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT US / MISSION STATEMENT -->
+  <section id="about-us" >
+    <div class="relative overflow-hidden" style="padding: clamp(60px, 8vw, 120px) var(--margin); background: var(--surface);">
+      <!-- Decorative arch in background -->
+      <div class="absolute" style="top: -20%; right: -5%; width: 40vw; height: 120%; clip-path: var(--arch); background: var(--sky); opacity: 0.06;" aria-hidden="true"></div>
+      <div class="absolute" style="bottom: -10%; left: -5%; width: 25vw; height: 80%; clip-path: var(--arch); background: var(--sky); opacity: 0.04;" aria-hidden="true"></div>
+
+      <div class="relative z-10 text-center" style="max-width: 720px; margin: 0 auto;">
+        <div style="display: inline-block; width: 48px; height: 2px; background: var(--gold); margin-bottom: 32px;" aria-hidden="true"></div>
+        <h2 class="font-semibold" style="font-size: var(--step-head); letter-spacing: -0.03em; color: var(--cream);">
+          <span data-lang="en">Mission Statement</span>
+          <span data-lang="es">Declaración de Misión</span>
+        </h2>
+        <blockquote style="margin-top: 32px; color: var(--cream); line-height: 1.9; font-size: var(--step-body); opacity: 0.9;">
+          <span data-lang="en">Most Holy Name of Jesus is a place where families are formed, cultures are celebrated, and each life is blessed with the love of God in bonds of faith as disciples, bonds of truth as believers, and in bonds of service as missionaries.</span>
+          <span data-lang="es">Santo Nombre de Jesús es un lugar donde las familias son formadas, las culturas celebradas, cada vida bendecida con el amor de Dios en lazos de fe como discípulos, en lazos de verdad como creyentes, y en lazos de servicio como misioneros.</span>
+        </blockquote>
+        <p style="margin-top: 24px; color: var(--sky); line-height: 1.8;">
+          <span data-lang="en">With diverse cultures and rich faith traditions, we celebrate as one catholic family in Christ, working together to build the Kingdom of God and proclaim the Gospel. We embody the New Evangelization, recognizing our gifts and returning them with increase in self-giving service to all.</span>
+          <span data-lang="es">Con diversas culturas y ricas tradiciones de fe, celebramos como una familia católica en Cristo, trabajando juntos para construir el Reino de Dios y proclamar el Evangelio. Personificamos la Nueva Evangelización reconociendo nuestros talentos y regresándolos aumentados en una auto entrega al servicio a todos.</span>
+        </p>
+        <div style="display: inline-block; width: 48px; height: 2px; background: var(--gold); margin-top: 40px;" aria-hidden="true"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHURCHES — Three columns, hover enlargement -->
+  <section id="churches"  style="padding: clamp(60px, 8vw, 100px) var(--margin);">
+    <h2 class="font-semibold" style="font-size: var(--step-head); letter-spacing: -0.03em; color: var(--ink); margin-bottom: 48px;">
+      <span data-lang="en">Our Churches</span>
+      <span data-lang="es">Nuestras Iglesias</span>
+    </h2>
+
+    <!-- Three church cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+      {churches.map((church, i) => (
+        <a
+          href={church.mapUrl || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(church.address)}`}
+          target="_blank"
+          rel="noopener"
+          class="church-card group relative block overflow-hidden"
+          style="background: var(--field-ht); transition: transform 0.4s cubic-bezier(0.2,0,0,1), box-shadow 0.4s ease; text-decoration: none;"
+        >
+          <div class="relative overflow-hidden" style="aspect-ratio: 3/4;">
+            <img
+              src={church.image}
+              width="600"
+              height="750"
+              alt={`${church.name.en} — click to view on map`}
+              class="w-full h-full object-cover object-center"
+              style="transition: transform 0.6s cubic-bezier(0.2,0,0,1); object-position: center center;"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(41,53,75,0.8) 0%, transparent 50%);"></div>
+          </div>
+
+          <div class="absolute bottom-0 left-0 right-0" style="padding: 24px; z-index: 2;">
+            <h3 class="font-semibold" style="font-size: var(--step-lead); color: #FCF9F2; letter-spacing: -0.02em;">
+              <span data-lang="en">{church.name.en}</span>
+              <span data-lang="es">{church.name.es}</span>
+            </h3>
+            <p style="margin-top: 6px; font-size: var(--step-small); color: var(--sky);">
+              {church.address} &#8599;
+            </p>
+          </div>
+        </a>
+      ))}
+    </div>
+
+  </section>
+
+  <!-- PASTOR -->
+  <section id="pastor" style="padding: clamp(60px, 8vw, 100px) var(--margin); background: var(--surface);">
+    <h2 class="font-semibold lg:hidden" style="font-size: var(--step-head); letter-spacing: -0.03em; color: var(--cream); margin-bottom: 32px;">
+      <span data-lang="en">Your Pastor</span>
+      <span data-lang="es">Su Párroco</span>
+    </h2>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 max-w-5xl">
+      <div style="clip-path: var(--arch); aspect-ratio: 3/4; max-width: 400px; overflow: hidden; background: var(--field-olh);">
+        <img src="/assets/presentation-drawing-of-a-late-baroque-altar.jpg" width="3124" height="4000" alt="Baroque church altar architectural drawing" class="w-full h-full object-cover" loading="lazy" decoding="async" />
+      </div>
+      <div class="flex flex-col justify-center">
+        <h2 class="font-semibold" style="font-size: var(--step-head); letter-spacing: -0.03em; color: var(--cream);">
+          <span data-lang="en">Your Pastor</span>
+          <span data-lang="es">Su Párroco</span>
+        </h2>
+        <p class="mt-6" style="font-size: var(--step-lead); font-weight: 500; color: var(--cream);">{data.pastor.name}</p>
+        <p style="color: var(--sky);">
+          <span data-lang="en">{data.pastor.title.en}, Most Holy Name of Jesus Parish</span>
+          <span data-lang="es">{data.pastor.title.es}, Parroquia del Santísimo Nombre de Jesús</span>
+        </p>
+
+        <div style="margin-top: 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+          <div>
+            <p style="font-size: var(--step-small); color: var(--gold); font-weight: 500;">
+              <span data-lang="en">Parochial Vicar</span>
+              <span data-lang="es">Vicario Parroquial</span>
+            </p>
+            <p style="color: var(--cream); font-weight: 500; margin-top: 4px;">{data.pastor.vicar}</p>
+          </div>
+        </div>
+
+        <div style="margin-top: 24px;">
+          <p style="font-size: var(--step-small); color: var(--gold); font-weight: 500;">
+            <span data-lang="en">Deacons</span>
+            <span data-lang="es">Diáconos</span>
+          </p>
+          <p style="color: var(--cream); font-weight: 500; margin-top: 4px;">{data.pastor.deacons.join(' · ')}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ANNOUNCEMENTS DRAWER (slide from right) -->
+  <button id="announcements-tab" aria-label="Open announcements" style="position: fixed; right: 0; top: 50%; transform: translateY(-50%); z-index: 90; writing-mode: vertical-rl; padding: 16px 10px; background: var(--accent); color: var(--accent-ink); font-weight: 600; font-size: var(--step-small); font-family: inherit; border: none; cursor: pointer; letter-spacing: 0.03em;">
+    <span data-lang="en">Announcements</span>
+    <span data-lang="es">Anuncios</span>
+  </button>
+
+  <div id="announcements-drawer" style="position: fixed; top: 0; right: -400px; width: 400px; max-width: 90vw; height: 100vh; z-index: 150; background: var(--bg); transition: right 0.3s cubic-bezier(0.2,0,0,1); overflow-y: auto; padding: 0;">
+    <div style="padding: 24px; position: sticky; top: 0; background: var(--bg); z-index: 1; display: flex; justify-content: space-between; align-items: center;">
+      <h2 class="font-semibold" style="font-size: var(--step-lead); color: var(--ink); letter-spacing: -0.02em;">
+        <span data-lang="en">Announcements</span>
+        <span data-lang="es">Anuncios</span>
+      </h2>
+      <button id="announcements-close" aria-label="Close" style="background: none; border: none; color: var(--muted); font-size: 28px; cursor: pointer; font-family: inherit; line-height: 1; padding: 4px;">&times;</button>
+    </div>
+
+    <div id="announcements-list" style="padding: 0 24px 32px;">
+      <p style="color: var(--muted); font-size: var(--step-small);">
+        <span data-lang="en">Loading...</span>
+        <span data-lang="es">Cargando...</span>
+      </p>
+    </div>
+  </div>
+  <div id="announcements-overlay" style="display: none; position: fixed; inset: 0; z-index: 140; background: rgba(0,0,0,0.5);"></div>
+
+  <!-- BULLETINS (loaded client-side from bulletins.json) -->
+  <section id="bulletins" style="padding: clamp(60px, 8vw, 100px) var(--margin);">
+      <h2 class="font-semibold" style="font-size: var(--step-head); letter-spacing: -0.03em; color: var(--ink);">
+        <span data-lang="en">Weekly Bulletins</span>
+        <span data-lang="es">Boletines Semanales</span>
+      </h2>
+      <div id="bulletins-container" style="margin-top: 32px;">
+        <p style="color: var(--muted);">
+          <span data-lang="en">Loading bulletins...</span>
+          <span data-lang="es">Cargando boletines...</span>
+        </p>
+      </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" style="padding: clamp(60px, 8vw, 100px) var(--margin); background: var(--surface);">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-5xl">
+        <div>
+          <h2 class="font-semibold" style="font-size: var(--step-head); letter-spacing: -0.03em; color: var(--cream);">
+            <span data-lang="en">Get in Touch</span>
+            <span data-lang="es">Contáctenos</span>
+          </h2>
+          <p style="margin-top: 8px; color: var(--sky);">
+            <span data-lang="en">Parish Office at La Asunción</span>
+            <span data-lang="es">Oficina Parroquial en La Asunción</span>
+          </p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 20px;">
+          <div>
+            <p style="font-size: var(--step-small); color: var(--gold); font-weight: 500;">
+              <span data-lang="en">Address</span>
+              <span data-lang="es">Dirección</span>
+            </p>
+            <p style="color: var(--cream); font-weight: 500; margin-top: 4px;">777 Cortlandt Street<br/>Perth Amboy, NJ 08861</p>
+          </div>
+          <div>
+            <p style="font-size: var(--step-small); color: var(--gold); font-weight: 500;">
+              <span data-lang="en">Phone</span>
+              <span data-lang="es">Teléfono</span>
+            </p>
+            <p style="color: var(--cream); font-weight: 500; margin-top: 4px;"><a href="tel:+17324420512">{data.parish.phone}</a></p>
+          </div>
+          <div>
+            <p style="font-size: var(--step-small); color: var(--gold); font-weight: 500;">Email</p>
+            <p style="color: var(--cream); font-weight: 500; margin-top: 4px;"><a href={`mailto:${data.parish.email}`}>{data.parish.email}</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Three church addresses -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-5xl" style="margin-top: 48px; padding-top: 48px;">
+        {churches.map((church) => (
+          <div style="padding: 20px; background: rgba(252,249,242,0.08);">
+            <h3 style="font-weight: 600; font-size: var(--step-small); color: var(--gold);">
+              <span data-lang="en">{church.name.en}</span>
+              <span data-lang="es">{church.name.es}</span>
+            </h3>
+            <p style="margin-top: 4px; font-size: var(--step-small); color: var(--sky);">{church.address}</p>
+          </div>
+        ))}
+      </div>
+  </section>
+
+  <!-- FOOTER -->
+  <div style="height: 3px; background: var(--gold);"></div>
+  <footer style="padding: 40px var(--margin); background: var(--surface);">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" style="font-size: var(--step-small);">
+        <div>
+          <p style="font-weight: 600; color: var(--gold);">
+            <span data-lang="en">Diocese of Metuchen</span>
+            <span data-lang="es">Diócesis de Metuchen</span>
+          </p>
+          <p style="color: var(--sky); margin-top: 4px;">Perth Amboy, New Jersey</p>
+        </div>
+        <div>
+          <p style="font-weight: 600; color: var(--cream);">
+            <span data-lang="en">Quick Links</span>
+            <span data-lang="es">Enlaces Rápidos</span>
+          </p>
+          <div style="margin-top: 8px; display: flex; flex-direction: column; gap: 4px; color: var(--sky);">
+            <a href="#churches"><span data-lang="en">Churches</span><span data-lang="es">Iglesias</span></a>
+            <a href="#pastor"><span data-lang="en">Pastor</span><span data-lang="es">Párroco</span></a>
+            <a href="#announcements"><span data-lang="en">Announcements</span><span data-lang="es">Anuncios</span></a>
+          </div>
+        </div>
+        <div>
+          <p style="font-weight: 600; color: var(--cream);">
+            <span data-lang="en">Contact</span>
+            <span data-lang="es">Contacto</span>
+          </p>
+          <div style="margin-top: 8px; display: flex; flex-direction: column; gap: 4px; color: var(--sky);">
+            <a href="tel:+17324420512">{data.parish.phone}</a>
+            <a href={`mailto:${data.parish.email}`}>{data.parish.email}</a>
+          </div>
+        </div>
+        <div>
+          <p style="font-weight: 600; color: var(--cream);">
+            <span data-lang="en">Image Credits</span>
+            <span data-lang="es">Créditos de Imágenes</span>
+          </p>
+          <div style="margin-top: 8px; color: var(--sky); font-size: var(--step-small); line-height: 1.4; opacity: 0.7;">
+            <p>Oleg Yunakov, Dietmar Rabich, Nheyob (CC BY-SA 4.0) via Wikimedia Commons</p>
+            <p style="margin-top: 4px;">The Metropolitan Museum of Art (Public Domain)</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4" style="margin-top: 48px; padding-top: 24px; font-size: var(--step-small); color: var(--sky); opacity: 0.6;">
+        <p>&copy; {new Date().getFullYear()} Most Holy Name of Jesus Parish</p>
+        <p>
+          <span data-lang="en">All rights reserved</span>
+          <span data-lang="es">Todos los derechos reservados</span>
+        </p>
+      </div>
+  </footer>
+
+  <!-- FLOATING MASS TIMES BUTTON -->
+  <button id="mass-times-btn" aria-label="View Mass Times" style="position: fixed; bottom: 32px; right: 32px; z-index: 100; padding: 16px 28px; background: var(--accent); color: var(--accent-ink); font-weight: 600; font-size: var(--step-body); cursor: pointer; border: none; font-family: inherit; box-shadow: 0 4px 24px rgba(51,91,136,0.3); transition: transform 0.2s ease, box-shadow 0.2s ease;">
+    <span data-lang="en">Mass Times</span>
+    <span data-lang="es">Horarios de Misa</span>
+  </button>
+
+  <!-- MASS TIMES MODAL -->
+  <div id="mass-times-modal" style="display: none; position: fixed; inset: 0; z-index: 200;">
+    <div id="mass-times-overlay" style="position: absolute; inset: 0; background: rgba(0,0,0,0.7);"></div>
+    <div style="position: relative; z-index: 1; max-width: 640px; margin: 10vh auto; background: var(--bg); padding: clamp(24px, 4vw, 40px);">
+      <!-- Header -->
+      <div class="flex justify-between items-center" style="margin-bottom: 24px;">
+        <h2 class="font-semibold" style="font-size: var(--step-head); color: var(--ink); letter-spacing: -0.03em;">
+          <span data-lang="en">Mass Times</span>
+          <span data-lang="es">Horarios de Misa</span>
+        </h2>
+        <button id="mass-times-close" aria-label="Close" style="background: none; border: none; color: var(--muted); font-size: 32px; cursor: pointer; padding: 8px; font-family: inherit; line-height: 1;">&times;</button>
+      </div>
+
+      <!-- Church tabs -->
+      <div class="flex gap-2 flex-wrap" style="margin-bottom: 24px;">
+        {churches.map((church, i) => (
+          <button
+            class="modal-church-tab"
+            data-modal-church={church.id}
+            aria-pressed={i === 0 ? "true" : "false"}
+            style={`padding: 8px 16px; font-size: var(--step-small); font-weight: 600; font-family: inherit; border: none; cursor: pointer; transition: background 0.2s ease, color 0.2s ease; background: ${i === 0 ? 'var(--accent)' : 'var(--bg)'}; color: ${i === 0 ? 'var(--accent-ink)' : 'var(--muted)'};`}
+          >
+            <span data-lang="en">{church.name.en.replace(' Church', '').replace(' Catholic', '')}</span>
+            <span data-lang="es">{church.name.es.replace(' Iglesia', '').replace(' Católica', '')}</span>
+          </button>
+        ))}
+      </div>
+
+      <!-- Church content panels -->
+      {churches.map((church, i) => (
+        <div class={`modal-church-panel ${i === 0 ? 'active' : ''}`} data-modal-panel={church.id} style={i === 0 ? '' : 'display: none;'}>
+          <p style="font-size: var(--step-small); color: var(--muted); margin-bottom: 20px;">{church.address}</p>
+
+          <!-- Category tabs -->
+          <div class="flex gap-2" style="margin-bottom: 20px;">
+            <button class="modal-cat-tab active" data-cat="mass" data-for={church.id} style="padding: 6px 14px; font-size: var(--step-small); font-family: inherit; border: none; cursor: pointer; background: var(--accent); color: var(--accent-ink); font-weight: 500; transition: background 0.2s, color 0.2s;">
+              <span data-lang="en">Mass Times</span>
+              <span data-lang="es">Misas</span>
+            </button>
+            <button class="modal-cat-tab" data-cat="confessions" data-for={church.id} style="padding: 6px 14px; font-size: var(--step-small); font-family: inherit; border: none; cursor: pointer; background: var(--bg); color: var(--muted); font-weight: 500; transition: background 0.2s, color 0.2s;">
+              <span data-lang="en">Confessions</span>
+              <span data-lang="es">Confesiones</span>
+            </button>
+            {church.masses.adoration && (
+              <button class="modal-cat-tab" data-cat="adoration" data-for={church.id} style="padding: 6px 14px; font-size: var(--step-small); font-family: inherit; border: none; cursor: pointer; background: var(--bg); color: var(--muted); font-weight: 500; transition: background 0.2s, color 0.2s;">
+                <span data-lang="en">Adoration</span>
+                <span data-lang="es">Adoración</span>
+              </button>
+            )}
+          </div>
+
+          <!-- Mass Times content -->
+          <div class="modal-cat-content active" data-cat-content="mass" data-content-for={church.id}>
+            <div style="margin-bottom: 20px;">
+              <h4 style="font-size: var(--step-small); color: var(--accent); font-weight: 600; margin-bottom: 10px;">
+                <span data-lang="en">Sunday</span>
+                <span data-lang="es">Domingo</span>
+              </h4>
+              {church.masses.sunday?.map(m => (
+                <div class="flex justify-between" style="padding: 8px 0; color: var(--ink);">
+                  <span style="font-weight: 500;">{m.time}</span>
+                  <span style="color: var(--muted);">{m.lang}</span>
+                </div>
+              ))}
+            </div>
+            {church.masses.saturday && (
+              <div style="margin-bottom: 20px;">
+                <h4 style="font-size: var(--step-small); color: var(--accent); font-weight: 600; margin-bottom: 10px;">
+                  <span data-lang="en">Saturday</span>
+                  <span data-lang="es">Sábado</span>
+                </h4>
+                {church.masses.saturday.map(m => (
+                  <div class="flex justify-between" style="padding: 8px 0; color: var(--ink);">
+                    <span style="font-weight: 500;">{m.time}</span>
+                    <span style="color: var(--muted);">{m.lang}</span>
+                  </div>
+                ))}
+              </div>
+            )}
+            <div>
+              <h4 style="font-size: var(--step-small); color: var(--accent); font-weight: 600; margin-bottom: 10px;">
+                <span data-lang="en">Weekday</span>
+                <span data-lang="es">Entre Semana</span>
+              </h4>
+              {church.masses.weekday?.map(m => (
+                <div class="flex justify-between" style="padding: 8px 0; color: var(--ink);">
+                  <span style="font-weight: 500;">
+                    <span data-lang="en">{m.day.en}</span>
+                    <span data-lang="es">{m.day.es}</span>
+                  </span>
+                  <span style="color: var(--muted);">{m.time}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- Confessions content -->
+          <div class="modal-cat-content" data-cat-content="confessions" data-content-for={church.id} style="display: none;">
+            <p style="color: var(--ink); font-size: var(--step-lead); line-height: 1.6; margin-top: 8px;">
+              <span data-lang="en">{church.masses.confessions.en}</span>
+              <span data-lang="es">{church.masses.confessions.es}</span>
+            </p>
+          </div>
+
+          <!-- Adoration content -->
+          {church.masses.adoration && (
+            <div class="modal-cat-content" data-cat-content="adoration" data-content-for={church.id} style="display: none;">
+              <p style="color: var(--ink); font-size: var(--step-lead); line-height: 1.6; margin-top: 8px;">
+                <span data-lang="en">{church.masses.adoration.en}</span>
+                <span data-lang="es">{church.masses.adoration.es}</span>
+              </p>
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <script>
+    // Language toggle
+    const toggle = document.getElementById('lang-toggle');
+    if (toggle) {
+      toggle.addEventListener('click', () => {
+        const html = document.documentElement;
+        const isEn = html.lang === 'en';
+        html.lang = isEn ? 'es' : 'en';
+        toggle.textContent = isEn ? 'EN' : 'ES';
+      });
+    }
+
+    // Mass Times modal
+    const massBtn = document.getElementById('mass-times-btn');
+    const massModal = document.getElementById('mass-times-modal');
+    const massClose = document.getElementById('mass-times-close');
+    const massOverlay = document.getElementById('mass-times-overlay');
+
+    function openMassModal() { massModal.style.display = 'block'; document.body.style.overflow = 'hidden'; }
+    function closeMassModal() { massModal.style.display = 'none'; document.body.style.overflow = ''; }
+
+    massBtn?.addEventListener('click', openMassModal);
+    massClose?.addEventListener('click', closeMassModal);
+    massOverlay?.addEventListener('click', closeMassModal);
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMassModal(); });
+
+    massBtn?.addEventListener('mouseenter', () => { massBtn.style.transform = 'translateY(-2px)'; massBtn.style.boxShadow = '0 6px 32px rgba(51,91,136,0.4)'; });
+    massBtn?.addEventListener('mouseleave', () => { massBtn.style.transform = ''; massBtn.style.boxShadow = '0 4px 24px rgba(51,91,136,0.3)'; });
+
+    // Church tabs in modal
+    document.querySelectorAll('.modal-church-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        const id = tab.getAttribute('data-modal-church');
+        document.querySelectorAll('.modal-church-tab').forEach(t => {
+          const active = t === tab;
+          t.setAttribute('aria-pressed', active ? 'true' : 'false');
+          t.style.background = active ? 'var(--accent)' : 'var(--bg)';
+          t.style.color = active ? 'var(--accent-ink)' : 'var(--muted)';
+        });
+        document.querySelectorAll('.modal-church-panel').forEach(p => {
+          const show = p.getAttribute('data-modal-panel') === id;
+          p.style.display = show ? '' : 'none';
+          p.classList.toggle('active', show);
+        });
+      });
+    });
+
+    // Category tabs in modal
+    document.querySelectorAll('.modal-cat-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        const cat = tab.getAttribute('data-cat');
+        const churchId = tab.getAttribute('data-for');
+        document.querySelectorAll(`.modal-cat-tab[data-for="${churchId}"]`).forEach(t => {
+          const active = t === tab;
+          t.classList.toggle('active', active);
+          t.style.background = active ? 'var(--accent)' : 'var(--bg)';
+          t.style.color = active ? 'var(--accent-ink)' : 'var(--muted)';
+        });
+        document.querySelectorAll(`.modal-cat-content[data-content-for="${churchId}"]`).forEach(c => {
+          c.style.display = c.getAttribute('data-cat-content') === cat ? '' : 'none';
+        });
+      });
+    });
+
+    // Bulletins — fetch manifest and render client-side
+    (async () => {
+      const container = document.getElementById('bulletins-container');
+      if (!container) return;
+      try {
+        const res = await fetch('/content/bulletins.json');
+        const items = await res.json();
+        if (!items.length) {
+          container.innerHTML = `<p style="color: var(--muted);">
+            <span data-lang="en">No bulletins available yet.</span>
+            <span data-lang="es">No hay boletines disponibles aún.</span>
+          </p>`;
+          if (document.documentElement.lang === 'es') {
+            container.querySelectorAll('[data-lang="en"]').forEach(e => e.style.display = 'none');
+            container.querySelectorAll('[data-lang="es"]').forEach(e => e.style.display = '');
+          }
+          return;
+        }
+
+        const byYear = {};
+        items.forEach(b => {
+          if (!byYear[b.year]) byYear[b.year] = [];
+          const d = new Date(b.year, b.month - 1, b.day);
+          byYear[b.year].push({
+            ...b, date: d,
+            label: d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }),
+            labelEs: d.toLocaleDateString('es-ES', { month: 'long', day: 'numeric', year: 'numeric' }),
+            weekLabel: d.toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric' }),
+            weekLabelEs: d.toLocaleDateString('es-ES', { weekday: 'long', month: 'short', day: 'numeric' }),
+          });
+        });
+        const years = Object.keys(byYear).map(Number).sort((a, b) => b - a);
+
+        const monthNamesEn = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+        const monthNamesEs = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+        const isEs = document.documentElement.lang === 'es';
+
+        const latest = items[0] ? byYear[years[0]][0] : null;
+
+        let html = '';
+
+        // Latest bulletin — featured
+        if (latest) {
+          html += `<div style="display: flex; align-items: center; gap: 24px; padding: 24px 32px; background: var(--field-la); margin-bottom: 40px; max-width: 500px;">
+            <div style="width: 52px; height: 68px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: var(--accent); color: var(--accent-ink); font-weight: 700; font-size: 12px;">PDF</div>
+            <div style="flex: 1;">
+              <p style="font-size: var(--step-small); color: var(--muted);" data-lang="en">Latest Bulletin</p>
+              <p style="font-size: var(--step-small); color: var(--muted);" data-lang="es">Último Boletín</p>
+              <p style="font-weight: 600; color: var(--ink); font-size: var(--step-body); margin-top: 4px;" data-lang="en">${latest.label}</p>
+              <p style="font-weight: 600; color: var(--ink); font-size: var(--step-body); margin-top: 4px;" data-lang="es">${latest.labelEs}</p>
+            </div>
+            <a href="/content/sunday-uploads/${latest.file}" download style="padding: 10px 24px; background: var(--accent); color: var(--accent-ink); font-weight: 600; font-size: var(--step-small); text-decoration: none;">
+              <span data-lang="en">Download</span>
+              <span data-lang="es">Descargar</span>
+            </a>
+          </div>`;
+        }
+
+        // Archive — month picker
+        html += `<p style="font-weight: 600; color: var(--ink); margin-bottom: 16px;">
+          <span data-lang="en">Archive</span>
+          <span data-lang="es">Archivo</span>
+        </p>`;
+
+        html += `<div style="display: flex; gap: 12px; align-items: center; margin-bottom: 20px;">
+          <select id="bulletin-year-select" style="padding: 8px 16px; font-size: var(--step-small); font-family: inherit; border: 2px solid var(--accent); background: var(--bg); color: var(--ink); cursor: pointer;">`;
+        years.forEach(y => { html += `<option value="${y}">${y}</option>`; });
+        html += `</select>
+          <select id="bulletin-month-select" style="padding: 8px 16px; font-size: var(--step-small); font-family: inherit; border: 2px solid var(--accent); background: var(--bg); color: var(--ink); cursor: pointer;">`;
+
+        const firstYearMonths = Object.keys(byYear[years[0]].reduce((acc, b) => { acc[b.month] = true; return acc; }, {})).map(Number).sort((a, b) => b - a);
+        firstYearMonths.forEach(m => {
+          const mName = isEs ? monthNamesEs[m-1] : monthNamesEn[m-1];
+          html += `<option value="${m}">${mName}</option>`;
+        });
+
+        html += `</select></div>`;
+
+        // All month panels (hidden by default except first)
+        const allMonthKeys = [];
+        years.forEach(y => {
+          const monthMap = {};
+          byYear[y].forEach(b => {
+            if (!monthMap[b.month]) monthMap[b.month] = [];
+            monthMap[b.month].push(b);
+          });
+          Object.keys(monthMap).map(Number).sort((a, b) => b - a).forEach(m => {
+            const key = y + '-' + m;
+            allMonthKeys.push(key);
+            html += `<div class="bulletin-month-panel" data-month-panel="${key}" style="${allMonthKeys.length === 1 ? '' : 'display:none;'}">`;
+            monthMap[m].forEach(b => {
+              html += `<a href="/content/sunday-uploads/${b.file}" download style="display: flex; align-items: center; gap: 16px; padding: 12px 16px; background: var(--field-la); margin-bottom: 4px; text-decoration: none;">
+                <span style="font-weight: 600; color: var(--ink); width: 32px;">${b.day}</span>
+                <span style="color: var(--muted); font-size: var(--step-small);" data-lang="en">${b.date.toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric' })}</span>
+                <span style="color: var(--muted); font-size: var(--step-small);" data-lang="es">${b.date.toLocaleDateString('es-ES', { weekday: 'long', month: 'short', day: 'numeric' })}</span>
+                <span style="margin-left: auto; color: var(--accent); font-size: var(--step-small); font-weight: 500;">PDF &#8595;</span>
+              </a>`;
+            });
+            html += '</div>';
+          });
+        });
+
+        container.innerHTML = html;
+
+        if (isEs) {
+          container.querySelectorAll('[data-lang="en"]').forEach(e => e.style.display = 'none');
+          container.querySelectorAll('[data-lang="es"]').forEach(e => e.style.display = '');
+        }
+
+        // Year/month select switching
+        const yearSel = document.getElementById('bulletin-year-select');
+        const monthSel = document.getElementById('bulletin-month-select');
+
+        function updateBulletinPanel() {
+          const key = yearSel.value + '-' + monthSel.value;
+          container.querySelectorAll('.bulletin-month-panel').forEach(p => {
+            p.style.display = p.getAttribute('data-month-panel') === key ? '' : 'none';
+          });
+        }
+
+        function updateMonthOptions() {
+          const y = parseInt(yearSel.value);
+          const months = Object.keys(byYear[y].reduce((acc, b) => { acc[b.month] = true; return acc; }, {})).map(Number).sort((a, b) => b - a);
+          monthSel.innerHTML = '';
+          months.forEach(m => {
+            const opt = document.createElement('option');
+            opt.value = m;
+            opt.textContent = (document.documentElement.lang === 'es' ? monthNamesEs : monthNamesEn)[m-1];
+            monthSel.appendChild(opt);
+          });
+          updateBulletinPanel();
+        }
+
+        yearSel?.addEventListener('change', updateMonthOptions);
+        monthSel?.addEventListener('change', updateBulletinPanel);
+      } catch { container.innerHTML = '<p style="color: var(--muted);">Could not load bulletins.</p>'; }
+    })();
+
+    // Announcements — fetch and render as bullets
+    (async () => {
+      const list = document.getElementById('announcements-list');
+      if (!list) return;
+      try {
+        const res = await fetch('/content/announcements.json');
+        const items = await res.json();
+        if (!items.length) {
+          list.innerHTML = `<p style="color: var(--muted); font-size: var(--step-small);"><span data-lang="en">No announcements at this time.</span><span data-lang="es">No hay anuncios en este momento.</span></p>`;
+        } else {
+          let html = '<ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 16px;">';
+          items.forEach(item => {
+            html += `<li style="padding-left: 20px; position: relative; color: var(--ink); font-size: var(--step-small); line-height: 1.6;">
+              <span style="position: absolute; left: 0; color: var(--accent);">&#x2022;</span>
+              <span data-lang="en">${item.en}</span>
+              <span data-lang="es">${item.es}</span>
+            </li>`;
+          });
+          html += '</ul>';
+          list.innerHTML = html;
+        }
+        if (document.documentElement.lang === 'es') {
+          list.querySelectorAll('[data-lang="en"]').forEach(e => e.style.display = 'none');
+          list.querySelectorAll('[data-lang="es"]').forEach(e => e.style.display = '');
+        }
+      } catch { list.innerHTML = '<p style="color: var(--muted);">Could not load announcements.</p>'; }
+    })();
+
+    // Announcements drawer
+    const annTab = document.getElementById('announcements-tab');
+    const annDrawer = document.getElementById('announcements-drawer');
+    const annClose = document.getElementById('announcements-close');
+    const annOverlay = document.getElementById('announcements-overlay');
+
+    function openDrawer() {
+      annDrawer.style.right = '0';
+      annOverlay.style.display = 'block';
+      annTab.style.display = 'none';
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDrawer() {
+      annDrawer.style.right = '-400px';
+      annOverlay.style.display = 'none';
+      annTab.style.display = '';
+      document.body.style.overflow = '';
+    }
+
+    annTab?.addEventListener('click', openDrawer);
+    annClose?.addEventListener('click', closeDrawer);
+    annOverlay?.addEventListener('click', closeDrawer);
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && annDrawer?.style.right === '0px') closeDrawer(); });
+
+    // Church cards — hover to enlarge
+    document.querySelectorAll('.church-card').forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        card.style.transform = 'scale(1.03)';
+        card.style.boxShadow = '0 0 60px rgba(51,91,136,0.15)';
+        const img = card.querySelector('img');
+        if (img) img.style.transform = 'scale(1.08)';
+        const arch = card.querySelector('[aria-hidden]');
+        if (arch) arch.style.opacity = '1';
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'scale(1)';
+        card.style.boxShadow = 'none';
+        const img = card.querySelector('img');
+        if (img) img.style.transform = 'scale(1)';
+        const arch = card.querySelector('[aria-hidden]');
+        if (arch) arch.style.opacity = '0';
+      });
+    });
+
+    // Entrance animations
+    const style = document.createElement('style');
+    style.textContent = `
+      .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+      .fade-up.entered { opacity: 1; transform: translateY(0); }
+      @media (prefers-reduced-motion: reduce) { .fade-up { opacity: 1 !important; transform: none !important; } }
+    `;
+    document.head.appendChild(style);
+
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('entered');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.05 });
+
+    document.querySelectorAll('section, footer').forEach(section => {
+      const els = section.querySelectorAll('h2, h3, h4, p, a.btn, img, .church-card, .church-content, ul, div[style*="grid"]');
+      let delay = 0;
+      els.forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight) return;
+        el.classList.add('fade-up');
+        el.style.transitionDelay = `${delay}ms`;
+        delay += 60;
+        obs.observe(el);
+      });
+    });
+  </script>
+</body>
+</html>
