@@ -33,10 +33,8 @@ jobs:
 
       - run: npm ci
 
-      - name: Generate manifests
-        run: |
-          bash scripts/update-bulletins.sh
-          bash scripts/update-photos.sh
+      - name: Generate content manifests
+        run: bash scripts/update-content.sh
 
       - run: npm run build
         env:
