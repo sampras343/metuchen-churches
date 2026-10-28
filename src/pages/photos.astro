@@ -181,15 +181,13 @@ const base = import.meta.env.BASE_URL;
         let html = '';
         albums.forEach(album => {
           if (!album.photos.length) return;
+          const folder = encodeURIComponent(album.folder);
           html += `<div style="margin-bottom: 48px;">
-            <h2 class="font-semibold" style="font-size: var(--step-lead); color: var(--ink); margin-bottom: 16px;">
-              <span data-lang="en">${album.album}</span>
-              <span data-lang="es">${album.albumEs}</span>
-            </h2>
-            <p style="font-size: var(--step-small); color: var(--muted); margin-bottom: 16px;">${new Date(album.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</p>
+            <h2 class="font-semibold" style="font-size: var(--step-lead); color: var(--ink); margin-bottom: 16px;">${album.album}</h2>
+            <p style="font-size: var(--step-small); color: var(--muted); margin-bottom: 16px;">${album.photos.length} photos</p>
             <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px;">
-              ${album.photos.map(p => `<a href="${BASE}content/photos/${p}" target="_blank" style="display: block; aspect-ratio: 1; overflow: hidden;">
-                <img src="${BASE}content/photos/${p}" alt="${album.album}" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" />
+              ${album.photos.map(p => `<a href="${BASE}content/photos/${folder}/${encodeURIComponent(p)}" target="_blank" style="display: block; aspect-ratio: 1; overflow: hidden;">
+                <img src="${BASE}content/photos/${folder}/${encodeURIComponent(p)}" alt="${album.album}" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" />
               </a>`).join('')}
             </div>
           </div>`;
