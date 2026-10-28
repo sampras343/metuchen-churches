@@ -47,8 +47,9 @@ body { overflow-x: hidden; }
 
 img { display: block; max-width: 100%; height: auto; }
 
-[data-lang="es"] { display: none; }
-html[lang="es"] [data-lang="en"] { display: none; }
+[data-lang] { display: none; }
+[data-lang="en"] { display: revert; }
+html[lang="es"] [data-lang] { display: none; }
 html[lang="es"] [data-lang="es"] { display: revert; }
 
 .church-content { display: none; }
@@ -80,6 +81,10 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
 ::selection { background: var(--accent); color: var(--accent-ink); }
+
+.sacraments-menu a:hover {
+  background: var(--field-la);
+}
 
 .mass-modal-wrapper {
   display: none;

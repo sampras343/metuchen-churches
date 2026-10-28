@@ -1,5 +1,7 @@
 ---
 import '../styles/global.css';
+import { t } from '../lib/i18n';
+import data from '../data/churches.json';
 const base = import.meta.env.BASE_URL;
 ---
 
@@ -15,69 +17,77 @@ const base = import.meta.env.BASE_URL;
 </head>
 <body>
 
-  <!-- NAV -->
   <nav class="fixed top-0 left-0 w-full z-50 flex items-center justify-between h-16" style="padding: 0 var(--margin); background: rgba(252,249,242,0.95);">
     <a href={base} class="flex items-center gap-2" style="color: var(--accent); font-size: var(--step-small); font-weight: 600; letter-spacing: -0.02em; text-decoration: none;">
       <img src={`${base}favicon.ico`} alt="" width="24" height="24" style="flex-shrink: 0;" />
-      <span data-lang="en">Most Holy Name of Jesus</span>
-      <span data-lang="es">Santísimo Nombre de Jesús</span>
+      <Fragment set:html={t('nav.home')} />
     </a>
     <div class="hidden md:flex items-center gap-6">
-      <a href={base} style="font-size: var(--step-small); color: var(--muted);">
-        <span data-lang="en">Home</span><span data-lang="es">Inicio</span>
-      </a>
-      <a href={`${base}sacraments`} style="font-size: var(--step-small); color: var(--accent); font-weight: 600;">
-        <span data-lang="en">Sacraments</span><span data-lang="es">Sacramentos</span>
-      </a>
+      <a href={base} style="font-size: var(--step-small); color: var(--muted);"><Fragment set:html={t('nav.home')} /></a>
+      <a href={`${base}sacraments`} style="font-size: var(--step-small); color: var(--accent); font-weight: 600;"><Fragment set:html={t('nav.sacraments')} /></a>
       <button id="lang-toggle" class="btn" style="padding: 6px 16px; font-size: var(--step-small);" aria-label="Switch language">ES</button>
     </div>
     <div class="flex md:hidden items-center gap-3">
       <button id="lang-toggle-mobile" class="btn" style="padding: 4px 12px; font-size: var(--step-small);" aria-label="Switch language">ES</button>
-      <a href={base} style="font-size: var(--step-small); color: var(--muted); text-decoration: none;">
-        <span data-lang="en">Home</span><span data-lang="es">Inicio</span>
-      </a>
+      <a href={base} style="font-size: var(--step-small); color: var(--muted); text-decoration: none;"><Fragment set:html={t('nav.home')} /></a>
     </div>
   </nav>
 
-  <!-- HERO -->
   <section style="padding: 100px var(--margin) 40px; background: var(--surface);">
     <h1 class="font-semibold" style="font-size: var(--step-head); letter-spacing: -0.03em; color: var(--cream);">
-      <span data-lang="en">Sacraments</span>
-      <span data-lang="es">Sacramentos</span>
+      <Fragment set:html={t('sacraments.title')} />
     </h1>
-    <p style="margin-top: 8px; color: var(--sky);">
-      <span data-lang="en">Grace through the sacred rites of the Church</span>
-      <span data-lang="es">Gracia a través de los ritos sagrados de la Iglesia</span>
-    </p>
+    <p style="margin-top: 8px; color: var(--sky);"><Fragment set:html={t('sacraments.subtitle')} /></p>
 
-    <!-- Tab switcher -->
     <div class="flex gap-3 flex-wrap" style="margin-top: 32px;">
       <button class="sacrament-tab active" data-tab="baptism" style="padding: 10px 24px; font-size: var(--step-small); font-weight: 600; font-family: inherit; border: none; cursor: pointer; background: var(--accent); color: var(--accent-ink); transition: background 0.2s, color 0.2s;">
-        <span data-lang="en">Baptism</span><span data-lang="es">Bautismo</span>
+        <Fragment set:html={t('sacraments.baptism.title')} />
       </button>
       <button class="sacrament-tab" data-tab="confession" style="padding: 10px 24px; font-size: var(--step-small); font-weight: 600; font-family: inherit; border: none; cursor: pointer; background: rgba(252,249,242,0.1); color: var(--sky); transition: background 0.2s, color 0.2s;">
-        <span data-lang="en">Confession</span><span data-lang="es">Confesión</span>
+        <Fragment set:html={t('sacraments.confession.title')} />
       </button>
       <button class="sacrament-tab" data-tab="matrimony" style="padding: 10px 24px; font-size: var(--step-small); font-weight: 600; font-family: inherit; border: none; cursor: pointer; background: rgba(252,249,242,0.1); color: var(--sky); transition: background 0.2s, color 0.2s;">
-        <span data-lang="en">Matrimony</span><span data-lang="es">Matrimonio</span>
+        <Fragment set:html={t('sacraments.matrimony.title')} />
       </button>
     </div>
   </section>
 
-  <!-- CONTENT -->
   <section style="padding: clamp(40px, 6vw, 80px) var(--margin);">
 
     <!-- Baptism -->
     <div class="sacrament-panel active" data-panel="baptism">
       <h2 class="font-semibold" style="font-size: var(--step-lead); color: var(--ink); margin-bottom: 16px;">
-        <span data-lang="en">Baptism</span><span data-lang="es">Bautismo</span>
+        <Fragment set:html={t('sacraments.baptism.title')} />
       </h2>
-      <div style="color: var(--muted); line-height: 1.8; max-width: 640px;">
-        <p data-lang="en">Parents seeking Baptism for their child must be registered parishioners. A Baptism preparation class is required for first-time parents. Please contact the parish office at least one month before the desired date to schedule.</p>
-        <p data-lang="es">Los padres que buscan el Bautismo para su hijo deben ser feligreses registrados. Se requiere una clase de preparación para el Bautismo para padres primerizos. Comuníquese con la oficina parroquial al menos un mes antes de la fecha deseada para programar.</p>
-        <p style="margin-top: 16px;">
-          <span style="color: var(--accent); font-weight: 500;" data-lang="en">Contact:</span>
-          <span style="color: var(--accent); font-weight: 500;" data-lang="es">Contacto:</span>
+      <div style="color: var(--muted); line-height: 1.8; max-width: 700px;">
+        <p><Fragment set:html={t('sacraments.baptism.intro')} /></p>
+
+        <a href={`${base}content/baptism-application.pdf`} download class="btn" style="display: inline-block; margin-top: 16px; margin-bottom: 32px; font-size: var(--step-small);">
+          <Fragment set:html={t('sacraments.baptism.downloadBtn')} />
+        </a>
+
+        <h3 class="font-semibold" style="font-size: var(--step-body); color: var(--ink); margin-bottom: 12px;">
+          <Fragment set:html={t('sacraments.baptism.reqTitle')} />
+        </h3>
+        <p><Fragment set:html={t('sacraments.baptism.reqWhen')} /></p>
+        <p style="margin-top: 12px;"><Fragment set:html={t('sacraments.baptism.reqClasses')} /></p>
+
+        <h3 class="font-semibold" style="font-size: var(--step-body); color: var(--ink); margin-top: 32px; margin-bottom: 12px;">
+          <Fragment set:html={t('sacraments.baptism.gpTitle')} />
+        </h3>
+        <p><Fragment set:html={t('sacraments.baptism.gpIntro')} /></p>
+
+        <ul style="margin-top: 12px; padding-left: 20px; list-style: disc;">
+          {['gpReq1','gpReq2','gpReq3','gpReq4','gpReq5'].map(k => (
+            <li style="padding: 4px 0;"><Fragment set:html={t(`sacraments.baptism.${k}`)} /></li>
+          ))}
+        </ul>
+
+        <p style="margin-top: 16px;"><Fragment set:html={t('sacraments.baptism.gpLaw')} /></p>
+        <p style="margin-top: 12px;"><Fragment set:html={t('sacraments.baptism.gpSponsor')} /></p>
+
+        <p style="margin-top: 24px;">
+          <span style="color: var(--accent); font-weight: 500;"><Fragment set:html={t('sacraments.contactLabel')} /></span>
           <a href="tel:+17324420512" style="color: var(--ink);">(732) 442-0512</a>
         </p>
       </div>
@@ -86,42 +96,34 @@ const base = import.meta.env.BASE_URL;
     <!-- Confession -->
     <div class="sacrament-panel" data-panel="confession" style="display: none;">
       <h2 class="font-semibold" style="font-size: var(--step-lead); color: var(--ink); margin-bottom: 16px;">
-        <span data-lang="en">Confession</span><span data-lang="es">Confesión</span>
+        <Fragment set:html={t('sacraments.confession.title')} />
       </h2>
-      <div style="color: var(--muted); line-height: 1.8; max-width: 640px;">
-        <p data-lang="en">The Sacrament of Reconciliation is available at the following times:</p>
-        <p data-lang="es">El Sacramento de la Reconciliación está disponible en los siguientes horarios:</p>
+      <div style="color: var(--muted); line-height: 1.8; max-width: 700px;">
+        <p><Fragment set:html={t('sacraments.confession.intro')} /></p>
         <ul style="margin-top: 12px; padding-left: 20px; list-style: disc;">
-          <li style="padding: 4px 0;">
-            <span style="color: var(--ink); font-weight: 500;">Holy Trinity</span> —
-            <span data-lang="en">Sunday 8:30–9:00 AM</span>
-            <span data-lang="es">Domingo 8:30–9:00 AM</span>
-          </li>
-          <li style="padding: 4px 0;">
-            <span style="color: var(--ink); font-weight: 500;">Our Lady of Hungary</span> —
-            <span data-lang="en">Thursday 6:00–6:45 PM, Saturday 5:00–5:45 PM</span>
-            <span data-lang="es">Jueves 6:00–6:45 PM, Sábado 5:00–5:45 PM</span>
-          </li>
-          <li style="padding: 4px 0;">
-            <span style="color: var(--ink); font-weight: 500;">La Asunción</span> —
-            <span data-lang="en">By appointment</span>
-            <span data-lang="es">Con cita previa</span>
-          </li>
+          {data.churches.map(church => (
+            <li style="padding: 4px 0;">
+              <span style="color: var(--ink); font-weight: 500;">{church.name.en}</span> —
+              <Fragment set:html={t(`massModal.confessions`)} />: {church.masses.confessions.en}
+            </li>
+          ))}
         </ul>
+        <p style="margin-top: 24px;">
+          <span style="color: var(--accent); font-weight: 500;"><Fragment set:html={t('sacraments.contactLabel')} /></span>
+          <a href="tel:+17324420512" style="color: var(--ink);">(732) 442-0512</a>
+        </p>
       </div>
     </div>
 
     <!-- Matrimony -->
     <div class="sacrament-panel" data-panel="matrimony" style="display: none;">
       <h2 class="font-semibold" style="font-size: var(--step-lead); color: var(--ink); margin-bottom: 16px;">
-        <span data-lang="en">Matrimony</span><span data-lang="es">Matrimonio</span>
+        <Fragment set:html={t('sacraments.matrimony.title')} />
       </h2>
-      <div style="color: var(--muted); line-height: 1.8; max-width: 640px;">
-        <p data-lang="en">Couples planning to marry must contact the parish office at least one year in advance. Pre-Cana or an approved marriage preparation program is required. At least one party must be a registered parishioner.</p>
-        <p data-lang="es">Las parejas que planean casarse deben comunicarse con la oficina parroquial al menos un año antes. Se requiere Pre-Cana o un programa de preparación matrimonial aprobado. Al menos una de las partes debe ser feligrés registrado.</p>
-        <p style="margin-top: 16px;">
-          <span style="color: var(--accent); font-weight: 500;" data-lang="en">Contact:</span>
-          <span style="color: var(--accent); font-weight: 500;" data-lang="es">Contacto:</span>
+      <div style="color: var(--muted); line-height: 1.8; max-width: 700px;">
+        <p><Fragment set:html={t('sacraments.matrimony.body')} /></p>
+        <p style="margin-top: 24px;">
+          <span style="color: var(--accent); font-weight: 500;"><Fragment set:html={t('sacraments.contactLabel')} /></span>
           <a href="tel:+17324420512" style="color: var(--ink);">(732) 442-0512</a>
         </p>
       </div>
@@ -129,7 +131,6 @@ const base = import.meta.env.BASE_URL;
   </section>
 
   <script>
-    // Language toggle
     function switchLang() {
       const html = document.documentElement;
       const isEn = html.lang === 'en';
@@ -140,7 +141,6 @@ const base = import.meta.env.BASE_URL;
     document.getElementById('lang-toggle')?.addEventListener('click', switchLang);
     document.getElementById('lang-toggle-mobile')?.addEventListener('click', switchLang);
 
-    // Sacrament tabs
     function showSacrament(id) {
       document.querySelectorAll('.sacrament-tab').forEach(t => {
         const active = t.getAttribute('data-tab') === id;
@@ -157,7 +157,6 @@ const base = import.meta.env.BASE_URL;
       t.addEventListener('click', () => showSacrament(t.getAttribute('data-tab')));
     });
 
-    // Handle URL hash for direct linking (e.g., /sacraments#confession)
     const hash = window.location.hash.replace('#', '');
     if (hash && ['baptism', 'confession', 'matrimony'].includes(hash)) {
       showSacrament(hash);

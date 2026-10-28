@@ -1,0 +1,90 @@
+{
+  "languages": ["en", "es"],
+  "languageNames": { "en": "English", "es": "Español" },
+
+  "nav.about": { "en": "About Us", "es": "Nosotros" },
+  "nav.churches": { "en": "Churches", "es": "Iglesias" },
+  "nav.bulletins": { "en": "Bulletins", "es": "Boletines" },
+  "nav.sacraments": { "en": "Sacraments", "es": "Sacramentos" },
+  "nav.contact": { "en": "Contact", "es": "Contacto" },
+  "nav.photos": { "en": "Photos", "es": "Fotos" },
+  "nav.home": { "en": "Home", "es": "Inicio" },
+
+  "hero.title": { "en": "Most Holy Name\nof Jesus Parish", "es": "Parroquia del Santísimo\nNombre de Jesús" },
+  "hero.subtitle": { "en": "Perth Amboy, New Jersey. Diocese of Metuchen.", "es": "Perth Amboy, New Jersey. Diócesis de Metuchen." },
+  "hero.cta1": { "en": "Explore Our Churches", "es": "Explora Nuestras Iglesias" },
+  "hero.cta2": { "en": "Get in Touch", "es": "Contáctenos" },
+
+  "mission.title": { "en": "Mission Statement", "es": "Declaración de Misión" },
+  "mission.body1": { "en": "Most Holy Name of Jesus is a place where families are formed, cultures are celebrated, and each life is blessed with the love of God in bonds of faith as disciples, bonds of truth as believers, and in bonds of service as missionaries.", "es": "Santo Nombre de Jesús es un lugar donde las familias son formadas, las culturas celebradas, cada vida bendecida con el amor de Dios en lazos de fe como discípulos, en lazos de verdad como creyentes, y en lazos de servicio como misioneros." },
+  "mission.body2": { "en": "With diverse cultures and rich faith traditions, we celebrate as one catholic family in Christ, working together to build the Kingdom of God and proclaim the Gospel. We embody the New Evangelization, recognizing our gifts and returning them with increase in self-giving service to all.", "es": "Con diversas culturas y ricas tradiciones de fe, celebramos como una familia católica en Cristo, trabajando juntos para construir el Reino de Dios y proclamar el Evangelio. Personificamos la Nueva Evangelización reconociendo nuestros talentos y regresándolos aumentados en una auto entrega al servicio a todos." },
+
+  "churches.title": { "en": "Our Churches", "es": "Nuestras Iglesias" },
+
+  "pastor.title": { "en": "Your Pastor", "es": "Su Párroco" },
+  "pastor.vicar": { "en": "Parochial Vicar", "es": "Vicario Parroquial" },
+  "pastor.deacons": { "en": "Deacons", "es": "Diáconos" },
+
+  "bulletins.title": { "en": "Weekly Bulletins", "es": "Boletines Semanales" },
+  "bulletins.latest": { "en": "Latest Bulletin", "es": "Último Boletín" },
+  "bulletins.download": { "en": "Download", "es": "Descargar" },
+  "bulletins.archive": { "en": "Archive", "es": "Archivo" },
+  "bulletins.loading": { "en": "Loading bulletins...", "es": "Cargando boletines..." },
+  "bulletins.none": { "en": "No bulletins available yet.", "es": "No hay boletines disponibles aún." },
+
+  "contact.title": { "en": "Get in Touch", "es": "Contáctenos" },
+  "contact.office": { "en": "Parish Office at La Asunción", "es": "Oficina Parroquial en La Asunción" },
+  "contact.address": { "en": "Address", "es": "Dirección" },
+  "contact.phone": { "en": "Phone", "es": "Teléfono" },
+  "contact.facebook": { "en": "Find us on Facebook", "es": "Encuéntranos en Facebook" },
+  "contact.rights": { "en": "All rights reserved", "es": "Todos los derechos reservados" },
+
+  "announcements.title": { "en": "Announcements", "es": "Anuncios" },
+  "announcements.none": { "en": "No announcements at this time.", "es": "No hay anuncios en este momento." },
+  "announcements.loading": { "en": "Loading...", "es": "Cargando..." },
+
+  "massModal.title": { "en": "Mass Times", "es": "Horarios de Misa" },
+  "massModal.sunday": { "en": "Sunday", "es": "Domingo" },
+  "massModal.saturday": { "en": "Saturday", "es": "Sábado" },
+  "massModal.weekday": { "en": "Weekday", "es": "Entre Semana" },
+  "massModal.confessions": { "en": "Confessions", "es": "Confesiones" },
+  "massModal.adoration": { "en": "Adoration", "es": "Adoración" },
+  "massModal.massTimes": { "en": "Mass Times", "es": "Misas" },
+
+  "sacraments.title": { "en": "Sacraments", "es": "Sacramentos" },
+  "sacraments.subtitle": { "en": "Grace through the sacred rites of the Church", "es": "Gracia a través de los ritos sagrados de la Iglesia" },
+  "sacraments.contactLabel": { "en": "Contact:", "es": "Contacto:" },
+
+  "sacraments.baptism.title": { "en": "Baptism", "es": "Bautizo" },
+  "sacraments.baptism.intro": { "en": "Anyone interested in baptizing his/her child, please print and complete the application below and return it to the parish office, located at La Asuncion Church, 777 Cortlandt St.", "es": "Cualquier persona interesada en bautizar a su hijo, por favor imprima y llene la solicitud a continuación y devuélvala a la oficina parroquial, ubicada en la iglesia La Asuncion, 777 Cortlandt St." },
+  "sacraments.baptism.downloadBtn": { "en": "Download Baptism Application (PDF)", "es": "Descargar Solicitud de Bautismo (PDF)" },
+  "sacraments.baptism.reqTitle": { "en": "Baptism Requirements", "es": "Requisitos para el Bautismo" },
+  "sacraments.baptism.reqWhen": { "en": "Baptisms are celebrated on the second Sunday of the month at 1:30 p.m. mass, in the Church of the Assumption.", "es": "Los bautismos se celebran el segundo domingo de cada mes en la misa de 1:30 p.m. en la Iglesia de La Asuncion." },
+  "sacraments.baptism.reqClasses": { "en": "Parents and Godparents must attend 2 baptism preparation classes held in the basement of Our Lady of Hungary Church, 697 Cortlandt Street, Perth Amboy, NJ.", "es": "Padres y Padrinos tienen que asistir a 2 clases de preparación para el bautismo que se llevan a cabo en el sótano de la Iglesia de Nuestra Señora de Hungría, 697 Cortlandt Street, Perth Amboy, NJ." },
+  "sacraments.baptism.gpTitle": { "en": "Godparent Requirements", "es": "Requisitos para los Padrinos" },
+  "sacraments.baptism.gpIntro": { "en": "Godparents play an essential role in our lives. They are called, at our baptism, to serve as a model of a Catholic life and catechesis.", "es": "Los padrinos juegan un papel esencial en nuestras vidas. Están llamados, en nuestro bautismo, a servir como modelo de vida católica y catequesis." },
+  "sacraments.baptism.gpReq1": { "en": "At least 18 years of age", "es": "Al menos tener 18 años de edad" },
+  "sacraments.baptism.gpReq2": { "en": "Have received the Sacraments of Baptism, Eucharist and Confirmation", "es": "Haber recibido los Sacramentos del Bautismo, Eucaristía y Confirmación" },
+  "sacraments.baptism.gpReq3": { "en": "Attends Mass regularly on Sundays and Holy Days of Obligation, regularly receiving Holy Communion", "es": "Asistir a misa regularmente los domingos y días de precepto, recibir regularmente la Sagrada Comunión" },
+  "sacraments.baptism.gpReq4": { "en": "If married, their marriage must be recognized by the Catholic Church", "es": "Si es casado, su matrimonio debe ser reconocido por la Iglesia Católica" },
+  "sacraments.baptism.gpReq5": { "en": "(For single Catholics) Living a Christian life in accord with the laws of God and the Catholic Church", "es": "(Para católicos solteros) Vivir una vida cristiana de acuerdo con las leyes de Dios y la Iglesia Católica" },
+  "sacraments.baptism.gpLaw": { "en": "These requirements are the universal law of the Church, and are not determined by the individual Parish.", "es": "Estos requisitos son la ley universal de la Iglesia y no están determinados por la parroquia individual." },
+  "sacraments.baptism.gpSponsor": { "en": "If the person you choose as godparent fulfills these requirements, they are asked to furnish a statement from their parish that they are indeed eligible to be a sponsor.", "es": "Si la persona que elige como padrino cumple con estos requisitos, se le pide que proporcione una declaración de su parroquia que de hecho es elegible para ser padrino." },
+
+  "sacraments.confession.title": { "en": "Confession", "es": "Confesión" },
+  "sacraments.confession.intro": { "en": "The Sacrament of Reconciliation is available at the following times:", "es": "El Sacramento de la Reconciliación está disponible en los siguientes horarios:" },
+
+  "sacraments.matrimony.title": { "en": "Matrimony", "es": "Matrimonio" },
+  "sacraments.matrimony.body": { "en": "Couples planning to marry must contact the parish office at least one year in advance. Pre-Cana or an approved marriage preparation program is required. At least one party must be a registered parishioner.", "es": "Las parejas que planean casarse deben comunicarse con la oficina parroquial al menos un año antes. Se requiere Pre-Cana o un programa de preparación matrimonial aprobado. Al menos una de las partes debe ser feligrés registrado." },
+
+  "footer.diocese": { "en": "Diocese of Metuchen", "es": "Diócesis de Metuchen" },
+  "footer.quickLinks": { "en": "Quick Links", "es": "Enlaces Rápidos" },
+  "footer.imageCredits": { "en": "Image Credits", "es": "Créditos de Imágenes" },
+
+  "photos.title": { "en": "Photos & Flyers", "es": "Fotos y Volantes" },
+  "photos.subtitle": { "en": "Parish life in pictures", "es": "La vida parroquial en imágenes" },
+  "photos.flyers": { "en": "Flyers", "es": "Volantes" },
+  "photos.albums": { "en": "Photo Albums", "es": "Álbumes de Fotos" },
+  "photos.thisWeek": { "en": "This Week", "es": "Esta Semana" },
+  "photos.flyerArchive": { "en": "Flyer Archive", "es": "Archivo de Volantes" }
+}
