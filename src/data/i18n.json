@@ -73,6 +73,13 @@
 
   "sacraments.confession.title": { "en": "Confession", "es": "Confesión" },
   "sacraments.confession.intro": { "en": "The Sacrament of Reconciliation is available at the following times:", "es": "El Sacramento de la Reconciliación está disponible en los siguientes horarios:" },
+  "sacraments.confession.sunday": { "en": "Sunday", "es": "Domingo" },
+  "sacraments.confession.sundayTime": { "en": "8:30 AM to 9:00 AM — Holy Trinity", "es": "8:30 AM a 9:00 AM — Santísima Trinidad" },
+  "sacraments.confession.thursday": { "en": "Thursday", "es": "Jueves" },
+  "sacraments.confession.thursdayTime": { "en": "6:00 PM to 6:45 PM — Our Lady of Hungary", "es": "6:00 PM a 6:45 PM — Nuestra Señora de Hungría" },
+  "sacraments.confession.saturday": { "en": "Saturday", "es": "Sábado" },
+  "sacraments.confession.saturdayTime": { "en": "5:00 PM to 5:45 PM — Our Lady of Hungary", "es": "5:00 PM a 5:45 PM — Nuestra Señora de Hungría" },
+  "sacraments.confession.byAppt": { "en": "By appointment if necessary", "es": "Con cita previa si es necesario" },
 
   "sacraments.matrimony.title": { "en": "Matrimony", "es": "Matrimonio" },
   "sacraments.matrimony.body": { "en": "Couples planning to marry must contact the parish office at least one year in advance. Pre-Cana or an approved marriage preparation program is required. At least one party must be a registered parishioner.", "es": "Las parejas que planean casarse deben comunicarse con la oficina parroquial al menos un año antes. Se requiere Pre-Cana o un programa de preparación matrimonial aprobado. Al menos una de las partes debe ser feligrés registrado." },
