@@ -26,20 +26,58 @@ const base = import.meta.env.BASE_URL;
       <span data-lang="en">Most Holy Name of Jesus</span>
       <span data-lang="es">Santísimo Nombre de Jesús</span>
     </a>
-    <div class="flex items-center gap-6">
-      <a href="#about-us" class="hidden sm:inline" style="font-size: var(--step-small); color: var(--muted);" data-lang="en">About Us</a>
-      <a href="#about-us" class="hidden sm:inline" style="font-size: var(--step-small); color: var(--muted);" data-lang="es">Nosotros</a>
-      <a href="#churches" class="hidden sm:inline" style="font-size: var(--step-small); color: var(--muted);" data-lang="en">Churches</a>
-      <a href="#churches" class="hidden sm:inline" style="font-size: var(--step-small); color: var(--muted);" data-lang="es">Iglesias</a>
-      <a href="#pastor" class="hidden sm:inline" style="font-size: var(--step-small); color: var(--muted);" data-lang="en">Pastor</a>
-      <a href="#pastor" class="hidden sm:inline" style="font-size: var(--step-small); color: var(--muted);" data-lang="es">Párroco</a>
-      <a href="#bulletins" class="hidden sm:inline" style="font-size: var(--step-small); color: var(--muted);" data-lang="en">Bulletins</a>
-      <a href="#bulletins" class="hidden sm:inline" style="font-size: var(--step-small); color: var(--muted);" data-lang="es">Boletines</a>
-      <a href="#contact" class="hidden sm:inline" style="font-size: var(--step-small); color: var(--muted);" data-lang="en">Contact</a>
-      <a href="#contact" class="hidden sm:inline" style="font-size: var(--step-small); color: var(--muted);" data-lang="es">Contacto</a>
+
+    <!-- Desktop nav -->
+    <div class="hidden md:flex items-center gap-6">
+      <a href="#about-us" style="font-size: var(--step-small); color: var(--muted);">
+        <span data-lang="en">About Us</span><span data-lang="es">Nosotros</span>
+      </a>
+      <a href="#churches" style="font-size: var(--step-small); color: var(--muted);">
+        <span data-lang="en">Churches</span><span data-lang="es">Iglesias</span>
+      </a>
+      <a href="#pastor" style="font-size: var(--step-small); color: var(--muted);">
+        <span data-lang="en">Pastor</span><span data-lang="es">Párroco</span>
+      </a>
+      <a href="#bulletins" style="font-size: var(--step-small); color: var(--muted);">
+        <span data-lang="en">Bulletins</span><span data-lang="es">Boletines</span>
+      </a>
+      <a href="#contact" style="font-size: var(--step-small); color: var(--muted);">
+        <span data-lang="en">Contact</span><span data-lang="es">Contacto</span>
+      </a>
       <button id="lang-toggle" class="btn" style="padding: 6px 16px; font-size: var(--step-small);" aria-label="Switch language">ES</button>
     </div>
+
+    <!-- Mobile: lang + hamburger -->
+    <div class="flex md:hidden items-center gap-3">
+      <button id="lang-toggle-mobile" class="btn" style="padding: 4px 12px; font-size: var(--step-small);" aria-label="Switch language">ES</button>
+      <button id="mobile-menu-btn" aria-label="Open menu" style="background: none; border: none; cursor: pointer; padding: 4px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
   </nav>
+
+  <!-- Mobile menu overlay -->
+  <div id="mobile-menu" style="display: none; position: fixed; inset: 0; z-index: 200;">
+    <div id="mobile-menu-overlay" style="position: absolute; inset: 0; background: rgba(0,0,0,0.4);"></div>
+    <div style="position: absolute; top: 0; right: 0; width: 280px; height: 100vh; background: var(--bg); padding: 24px; display: flex; flex-direction: column; gap: 8px;">
+      <button id="mobile-menu-close" aria-label="Close menu" style="align-self: flex-end; background: none; border: none; cursor: pointer; font-size: 28px; color: var(--ink); line-height: 1;">&times;</button>
+      <a href="#about-us" class="mobile-nav-link" style="padding: 12px 0; font-size: var(--step-body); font-weight: 500; color: var(--ink); text-decoration: none;">
+        <span data-lang="en">About Us</span><span data-lang="es">Nosotros</span>
+      </a>
+      <a href="#churches" class="mobile-nav-link" style="padding: 12px 0; font-size: var(--step-body); font-weight: 500; color: var(--ink); text-decoration: none;">
+        <span data-lang="en">Churches</span><span data-lang="es">Iglesias</span>
+      </a>
+      <a href="#pastor" class="mobile-nav-link" style="padding: 12px 0; font-size: var(--step-body); font-weight: 500; color: var(--ink); text-decoration: none;">
+        <span data-lang="en">Pastor</span><span data-lang="es">Párroco</span>
+      </a>
+      <a href="#bulletins" class="mobile-nav-link" style="padding: 12px 0; font-size: var(--step-body); font-weight: 500; color: var(--ink); text-decoration: none;">
+        <span data-lang="en">Bulletins</span><span data-lang="es">Boletines</span>
+      </a>
+      <a href="#contact" class="mobile-nav-link" style="padding: 12px 0; font-size: var(--step-body); font-weight: 500; color: var(--ink); text-decoration: none;">
+        <span data-lang="en">Contact</span><span data-lang="es">Contacto</span>
+      </a>
+    </div>
+  </div>
 
   <!-- HERO -->
   <section class="relative overflow-hidden" style="padding: 100px var(--margin) clamp(80px, 15vw, 200px); background: var(--bg);">
@@ -458,16 +496,26 @@ const base = import.meta.env.BASE_URL;
   <script>
     const BASE = document.body.getAttribute('data-base') || '/';
 
-    // Language toggle
-    const toggle = document.getElementById('lang-toggle');
-    if (toggle) {
-      toggle.addEventListener('click', () => {
-        const html = document.documentElement;
-        const isEn = html.lang === 'en';
-        html.lang = isEn ? 'es' : 'en';
-        toggle.textContent = isEn ? 'EN' : 'ES';
-      });
+    // Language toggle (both desktop and mobile buttons)
+    function switchLang() {
+      const html = document.documentElement;
+      const isEn = html.lang === 'en';
+      html.lang = isEn ? 'es' : 'en';
+      const label = isEn ? 'EN' : 'ES';
+      document.querySelectorAll('#lang-toggle, #lang-toggle-mobile').forEach(b => b.textContent = label);
     }
+    document.getElementById('lang-toggle')?.addEventListener('click', switchLang);
+    document.getElementById('lang-toggle-mobile')?.addEventListener('click', switchLang);
+
+    // Mobile menu
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+    function openMobileMenu() { mobileMenu.style.display = 'block'; document.body.style.overflow = 'hidden'; }
+    function closeMobileMenu() { mobileMenu.style.display = 'none'; document.body.style.overflow = ''; }
+    document.getElementById('mobile-menu-btn')?.addEventListener('click', openMobileMenu);
+    document.getElementById('mobile-menu-close')?.addEventListener('click', closeMobileMenu);
+    mobileMenuOverlay?.addEventListener('click', closeMobileMenu);
+    document.querySelectorAll('.mobile-nav-link').forEach(link => link.addEventListener('click', closeMobileMenu));
 
     // Mass Times modal
     const massBtn = document.getElementById('mass-times-btn');
