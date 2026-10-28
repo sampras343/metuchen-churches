@@ -1,9 +1,7 @@
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 
-export default defineConfig({
-  site: process.env.SITE_URL || '/',
-  base: process.env.SITE_BASE || '/',
+const config = {
   vite: {
     plugins: [tailwindcss()],
     server: {
@@ -11,4 +9,9 @@ export default defineConfig({
     },
   },
   publicDir: 'public',
-});
+};
+
+if (process.env.SITE_URL) config.site = process.env.SITE_URL;
+if (process.env.SITE_BASE) config.base = process.env.SITE_BASE;
+
+export default defineConfig(config);
