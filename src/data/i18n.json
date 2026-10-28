@@ -82,7 +82,16 @@
   "sacraments.confession.byAppt": { "en": "By appointment if necessary", "es": "Con cita previa si es necesario" },
 
   "sacraments.matrimony.title": { "en": "Matrimony", "es": "Matrimonio" },
-  "sacraments.matrimony.body": { "en": "Couples planning to marry must contact the parish office at least one year in advance. Pre-Cana or an approved marriage preparation program is required. At least one party must be a registered parishioner.", "es": "Las parejas que planean casarse deben comunicarse con la oficina parroquial al menos un año antes. Se requiere Pre-Cana o un programa de preparación matrimonial aprobado. Al menos una de las partes debe ser feligrés registrado." },
+  "sacraments.matrimony.reqTitle": { "en": "Marriage Requirements", "es": "Requisitos de matrimonio" },
+  "sacraments.matrimony.intro": { "en": "Please print and complete the application below and return it to the parish office, located at La Asuncion Church, 777 Cortlandt St.", "es": "Por favor imprima y llene la solicitud a continuación y devuélvala a la oficina parroquial, ubicada en la iglesia La Asuncion, 777 Cortlandt St." },
+  "sacraments.matrimony.downloadBtn": { "en": "Download Marriage Application (PDF)", "es": "Descargar Solicitud de Matrimonio (PDF)" },
+  "sacraments.matrimony.appointment": { "en": "Once received the pastor will schedule an appointment to speak with you to secure the date.", "es": "Una vez recibida, el párroco programará una cita para hablar con usted y asegurar la fecha." },
+  "sacraments.matrimony.req1": { "en": "Couple must be registered in the church", "es": "La pareja debe estar registrada en la iglesia" },
+  "sacraments.matrimony.req2": { "en": "The wedding should take place in a year", "es": "La boda debe tener lugar en un año" },
+  "sacraments.matrimony.req3intro": { "en": "Couple must have their papers in order, for example:", "es": "La pareja debe tener sus papeles en regla, por ejemplo:" },
+  "sacraments.matrimony.req3a": { "en": "Certificate of Baptism (updated)", "es": "Certificado de Bautismo (actualizado)" },
+  "sacraments.matrimony.req3b": { "en": "Certificate of Confirmation (updated)", "es": "Certificado de Confirmación (actualizada)" },
+  "sacraments.matrimony.req3c": { "en": "Letter of annulment (if was married before)", "es": "Carta de anulación (si estuvo casado antes)" },
 
   "footer.diocese": { "en": "Diocese of Metuchen", "es": "Diócesis de Metuchen" },
   "footer.quickLinks": { "en": "Quick Links", "es": "Enlaces Rápidos" },
