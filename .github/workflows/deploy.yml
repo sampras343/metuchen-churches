@@ -37,6 +37,9 @@ jobs:
         run: bash scripts/update-bulletins.sh
 
       - run: npm run build
+        env:
+          SITE_URL: https://sampras343.github.io
+          SITE_BASE: /metuchen-churches/
 
       - uses: actions/upload-pages-artifact@v3
         with:
