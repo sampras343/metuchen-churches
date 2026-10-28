@@ -38,6 +38,23 @@ const base = import.meta.env.BASE_URL;
       <a href="#bulletins" style="font-size: var(--step-small); color: var(--muted);">
         <span data-lang="en">Bulletins</span><span data-lang="es">Boletines</span>
       </a>
+      <div class="relative" id="sacraments-dropdown">
+        <button style="font-size: var(--step-small); color: var(--muted); background: none; border: none; font-family: inherit; cursor: pointer; padding: 0;">
+          <span data-lang="en">Sacraments</span><span data-lang="es">Sacramentos</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline-block; vertical-align: -1px; margin-left: 2px;"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="sacraments-menu" style="display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); margin-top: 8px; background: var(--bg); min-width: 180px; padding: 8px 0; z-index: 10;">
+          <a href={`${base}sacraments#baptism`} style="display: block; padding: 10px 20px; font-size: var(--step-small); color: var(--ink); text-decoration: none;">
+            <span data-lang="en">Baptism</span><span data-lang="es">Bautismo</span>
+          </a>
+          <a href={`${base}sacraments#confession`} style="display: block; padding: 10px 20px; font-size: var(--step-small); color: var(--ink); text-decoration: none;">
+            <span data-lang="en">Confession</span><span data-lang="es">Confesión</span>
+          </a>
+          <a href={`${base}sacraments#matrimony`} style="display: block; padding: 10px 20px; font-size: var(--step-small); color: var(--ink); text-decoration: none;">
+            <span data-lang="en">Matrimony</span><span data-lang="es">Matrimonio</span>
+          </a>
+        </div>
+      </div>
       <a href="#contact" style="font-size: var(--step-small); color: var(--muted);">
         <span data-lang="en">Contact</span><span data-lang="es">Contacto</span>
       </a>
@@ -70,6 +87,22 @@ const base = import.meta.env.BASE_URL;
       <a href="#bulletins" class="mobile-nav-link" style="padding: 12px 0; font-size: var(--step-body); font-weight: 500; color: var(--ink); text-decoration: none;">
         <span data-lang="en">Bulletins</span><span data-lang="es">Boletines</span>
       </a>
+      <div style="padding: 12px 0;">
+        <p style="font-size: var(--step-body); font-weight: 500; color: var(--ink);">
+          <span data-lang="en">Sacraments</span><span data-lang="es">Sacramentos</span>
+        </p>
+        <div style="padding-left: 16px; margin-top: 8px; display: flex; flex-direction: column; gap: 4px;">
+          <a href={`${base}sacraments#baptism`} style="padding: 8px 0; font-size: var(--step-small); color: var(--muted); text-decoration: none;">
+            <span data-lang="en">Baptism</span><span data-lang="es">Bautismo</span>
+          </a>
+          <a href={`${base}sacraments#confession`} style="padding: 8px 0; font-size: var(--step-small); color: var(--muted); text-decoration: none;">
+            <span data-lang="en">Confession</span><span data-lang="es">Confesión</span>
+          </a>
+          <a href={`${base}sacraments#matrimony`} style="padding: 8px 0; font-size: var(--step-small); color: var(--muted); text-decoration: none;">
+            <span data-lang="en">Matrimony</span><span data-lang="es">Matrimonio</span>
+          </a>
+        </div>
+      </div>
       <a href="#contact" class="mobile-nav-link" style="padding: 12px 0; font-size: var(--step-body); font-weight: 500; color: var(--ink); text-decoration: none;">
         <span data-lang="en">Contact</span><span data-lang="es">Contacto</span>
       </a>
@@ -511,6 +544,14 @@ const base = import.meta.env.BASE_URL;
     }
     document.getElementById('lang-toggle')?.addEventListener('click', switchLang);
     document.getElementById('lang-toggle-mobile')?.addEventListener('click', switchLang);
+
+    // Sacraments dropdown (desktop hover)
+    const dropdown = document.getElementById('sacraments-dropdown');
+    const dropMenu = dropdown?.querySelector('.sacraments-menu');
+    if (dropdown && dropMenu) {
+      dropdown.addEventListener('mouseenter', () => dropMenu.style.display = 'block');
+      dropdown.addEventListener('mouseleave', () => dropMenu.style.display = 'none');
+    }
 
     // Mobile menu
     const mobileMenu = document.getElementById('mobile-menu');
