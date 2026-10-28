@@ -3,6 +3,7 @@ import '../styles/global.css';
 import data from '../data/churches.json';
 
 const churches = data.churches;
+const base = import.meta.env.BASE_URL;
 ---
 
 <html lang="en">
@@ -11,17 +12,17 @@ const churches = data.churches;
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Most Holy Name of Jesus Parish — Perth Amboy, NJ</title>
   <meta name="description" content="Most Holy Name of Jesus Parish — Holy Trinity, La Asunción, and Our Lady of Hungary in Perth Amboy, New Jersey. Diocese of Metuchen." />
-  <link rel="icon" href="/favicon.ico" />
+  <link rel="icon" href={`${base}favicon.ico`} />
   <link rel="preconnect" href="https://api.fontshare.com" />
   <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
   <link href="https://api.fontshare.com/v2/css?f[]=chillax@400,500,600&display=swap" rel="stylesheet" />
 </head>
-<body>
+<body data-base={import.meta.env.BASE_URL}>
 
   <!-- NAV -->
   <nav class="fixed top-0 left-0 w-full z-50 flex items-center justify-between h-16" style="padding: 0 var(--margin); background: rgba(252,249,242,0.95);">
     <a href="#" class="flex items-center gap-2" style="color: var(--accent); font-size: var(--step-small); font-weight: 600; letter-spacing: -0.02em; text-decoration: none;">
-      <img src="/favicon.ico" alt="" width="24" height="24" style="flex-shrink: 0;" />
+      <img src={`${base}favicon.ico`} alt="" width="24" height="24" style="flex-shrink: 0;" />
       <span data-lang="en">Most Holy Name of Jesus</span>
       <span data-lang="es">Santísimo Nombre de Jesús</span>
     </a>
@@ -46,8 +47,8 @@ const churches = data.churches;
     <div class="absolute inset-0">
       <picture>
       <picture>
-        <source media="(max-width: 768px)" srcset="/assets/madonna-portrait.png" />
-        <img src="/assets/marian-sanctuary.png" alt="Serene Marian sanctuary in golden light" class="w-full h-full object-cover" style="opacity: 0.45;" decoding="async" />
+        <source media="(max-width: 768px)" srcset={`${base}assets/madonna-portrait.png`} />
+        <img src={`${base}assets/marian-sanctuary.png`} alt="Serene Marian sanctuary in golden light" class="w-full h-full object-cover" style="opacity: 0.45;" decoding="async" />
       </picture>
       </picture>
       <div class="absolute inset-0" style="background: rgba(41,53,75,0.6);"></div>
@@ -121,7 +122,7 @@ const churches = data.churches;
         >
           <div class="relative overflow-hidden" style="aspect-ratio: 3/4;">
             <img
-              src={church.image}
+              src={base + church.image.slice(1)}
               width="600"
               height="750"
               alt={`${church.name.en} — click to view on map`}
@@ -156,7 +157,7 @@ const churches = data.churches;
     </h2>
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 max-w-5xl">
       <div style="clip-path: var(--arch); aspect-ratio: 3/4; max-width: 400px; overflow: hidden; background: var(--field-olh);">
-        <img src="/assets/presentation-drawing-of-a-late-baroque-altar.jpg" width="3124" height="4000" alt="Baroque church altar architectural drawing" class="w-full h-full object-cover" loading="lazy" decoding="async" />
+        <img src={`${base}assets/presentation-drawing-of-a-late-baroque-altar.jpg`} width="3124" height="4000" alt="Baroque church altar architectural drawing" class="w-full h-full object-cover" loading="lazy" decoding="async" />
       </div>
       <div class="flex flex-col justify-center">
         <h2 class="font-semibold" style="font-size: var(--step-head); letter-spacing: -0.03em; color: var(--cream);">
@@ -455,6 +456,8 @@ const churches = data.churches;
   </div>
 
   <script>
+    const BASE = document.body.getAttribute('data-base') || '/';
+
     // Language toggle
     const toggle = document.getElementById('lang-toggle');
     if (toggle) {
@@ -523,7 +526,7 @@ const churches = data.churches;
       const container = document.getElementById('bulletins-container');
       if (!container) return;
       try {
-        const res = await fetch('/content/bulletins.json');
+        const res = await fetch(BASE + 'content/bulletins.json');
         const items = await res.json();
         if (!items.length) {
           container.innerHTML = `<p style="color: var(--muted);">
@@ -569,7 +572,7 @@ const churches = data.churches;
               <p style="font-weight: 600; color: var(--ink); font-size: var(--step-body); margin-top: 4px;" data-lang="en">${latest.label}</p>
               <p style="font-weight: 600; color: var(--ink); font-size: var(--step-body); margin-top: 4px;" data-lang="es">${latest.labelEs}</p>
             </div>
-            <a href="/content/sunday-uploads/${latest.file}" download style="padding: 10px 24px; background: var(--accent); color: var(--accent-ink); font-weight: 600; font-size: var(--step-small); text-decoration: none;">
+            <a href="${BASE}content/sunday-uploads/${latest.file}" download style="padding: 10px 24px; background: var(--accent); color: var(--accent-ink); font-weight: 600; font-size: var(--step-small); text-decoration: none;">
               <span data-lang="en">Download</span>
               <span data-lang="es">Descargar</span>
             </a>
@@ -609,7 +612,7 @@ const churches = data.churches;
             allMonthKeys.push(key);
             html += `<div class="bulletin-month-panel" data-month-panel="${key}" style="${allMonthKeys.length === 1 ? '' : 'display:none;'}">`;
             monthMap[m].forEach(b => {
-              html += `<a href="/content/sunday-uploads/${b.file}" download style="display: flex; align-items: center; gap: 16px; padding: 12px 16px; background: var(--field-la); margin-bottom: 4px; text-decoration: none;">
+              html += `<a href="${BASE}content/sunday-uploads/${b.file}" download style="display: flex; align-items: center; gap: 16px; padding: 12px 16px; background: var(--field-la); margin-bottom: 4px; text-decoration: none;">
                 <span style="font-weight: 600; color: var(--ink); width: 32px;">${b.day}</span>
                 <span style="color: var(--muted); font-size: var(--step-small);" data-lang="en">${b.date.toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric' })}</span>
                 <span style="color: var(--muted); font-size: var(--step-small);" data-lang="es">${b.date.toLocaleDateString('es-ES', { weekday: 'long', month: 'short', day: 'numeric' })}</span>
@@ -661,7 +664,7 @@ const churches = data.churches;
       const list = document.getElementById('announcements-list');
       if (!list) return;
       try {
-        const res = await fetch('/content/announcements.json');
+        const res = await fetch(BASE + 'content/announcements.json');
         const items = await res.json();
         if (!items.length) {
           list.innerHTML = `<p style="color: var(--muted); font-size: var(--step-small);"><span data-lang="en">No announcements at this time.</span><span data-lang="es">No hay anuncios en este momento.</span></p>`;
