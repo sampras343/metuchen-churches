@@ -81,6 +81,42 @@ button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
 ::selection { background: var(--accent); color: var(--accent-ink); }
 
+.mass-modal-wrapper {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 200;
+  background: rgba(0,0,0,0.7);
+  padding: 16px;
+  overflow: hidden;
+}
+.mass-modal-bg {
+  position: absolute;
+  inset: 0;
+}
+.mass-modal-content {
+  position: relative;
+  max-width: 640px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background: var(--bg);
+  padding: clamp(24px, 4vw, 40px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  touch-action: pan-y;
+  z-index: 1;
+}
+body.modal-open {
+  overflow: hidden;
+  height: 100vh;
+  touch-action: none;
+}
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
