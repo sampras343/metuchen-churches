@@ -305,13 +305,13 @@ const base = import.meta.env.BASE_URL;
       <!-- Three church addresses -->
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-5xl" style="margin-top: 48px; padding-top: 48px;">
         {churches.map((church) => (
-          <div style="padding: 20px; background: rgba(252,249,242,0.08);">
+          <a href={church.mapUrl || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(church.address)}`} target="_blank" rel="noopener" style="display: block; padding: 20px; background: rgba(252,249,242,0.08); text-decoration: none; transition: background 0.2s;">
             <h3 style="font-weight: 600; font-size: var(--step-small); color: var(--gold);">
               <span data-lang="en">{church.name.en}</span>
               <span data-lang="es">{church.name.es}</span>
             </h3>
-            <p style="margin-top: 4px; font-size: var(--step-small); color: var(--sky);">{church.address}</p>
-          </div>
+            <p style="margin-top: 4px; font-size: var(--step-small); color: var(--sky);">{church.address} &#8599;</p>
+          </a>
         ))}
       </div>
   </section>
